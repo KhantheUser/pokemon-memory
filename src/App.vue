@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="js">
 import MainScreen from './components/MainScreen.vue'
 import InteractScreen from './components/InteractScreen.vue'
 import Copyright from './components/CopyRight.vue'
@@ -12,7 +12,7 @@ export default {
     return {
       settings: {
         totalBlocks: 0,
-        cardsContext: [1],
+        cardsContext: [],
         startedAt: 0
       },
       statusMatch: 'default',
@@ -20,7 +20,7 @@ export default {
     }
   },
   methods: {
-    onHandleBeforeStart(config: any) {
+    onHandleBeforeStart(config) {
       console.log(config)
       this.settings.totalBlocks = config.totalBlocks
       const firstCards = Array.from({ length: config.totalBlocks / 2 }, (_, i) => i + 1)

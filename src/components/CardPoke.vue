@@ -48,8 +48,6 @@ export default {
   },
   data() {
     return {
-      height: window.screen.height,
-
       isDisabled: false,
       isFlipped: false
     }

@@ -26,8 +26,7 @@ import CardFlip from './CardPoke.vue'
 export default {
   data() {
     return {
-      rules: [],
-      height: window.screen.height
+      rules: []
     }
   },
   methods: {
