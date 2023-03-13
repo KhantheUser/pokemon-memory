@@ -21,15 +21,14 @@
       <div class="card__face card__face--back">
         <div
           class="card__content"
-          :style="{
-            backgroundImage: `url('src/assets/${imgBackFaceUrl}')`
-          }"
+          :style="{ backgroundImage: `url(src/assets/${imgBackFaceUrl})` }"
         ></div>
       </div>
     </div>
   </div>
 </template>
 <script>
+// import CopyRight from '@components/CopyRight.vue'
 export default {
   props: {
     imgBackFaceUrl: {
