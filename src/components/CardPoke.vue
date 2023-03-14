@@ -1,4 +1,5 @@
 <template>
+  <!-- {{ images }} -->
   <div
     class="card"
     :class="{ disabled: isDisabled }"
@@ -21,14 +22,15 @@
       <div class="card__face card__face--back">
         <div
           class="card__content"
-          :style="{ backgroundImage: `url(src/assets/${imgBackFaceUrl})` }"
+          :style="{
+            backgroundImage: `url(./${imgBackFaceUrl})`
+          }"
         ></div>
       </div>
     </div>
   </div>
 </template>
 <script>
-// import CopyRight from '@components/CopyRight.vue'
 export default {
   props: {
     imgBackFaceUrl: {
@@ -51,6 +53,7 @@ export default {
       isFlipped: false
     }
   },
+
   methods: {
     onToggleFlipCard() {
       if (this.isDisabled) return false
@@ -62,6 +65,13 @@ export default {
     },
     onEnableDisableMode() {
       this.isDisabled = true
+    },
+    getImageUrl(name) {
+      console.log(name)
+      return new URL(
+        `https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg`,
+        import.meta.url
+      ).href
     }
   }
 }

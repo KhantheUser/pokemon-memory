@@ -1,9 +1,11 @@
 <script lang="js">
-import MainScreen from './components/MainScreen.vue'
+
+import MainScreen from '@/components/MainScreen.vue'
 import InteractScreen from './components/InteractScreen.vue'
 import Copyright from './components/CopyRight.vue'
 import { shuffled } from './utils/array'
 import ResultScreen from './components/ResultScreen.vue'
+// eslint-disable-next-line no-undef
 
 export default {
   name: 'App',
